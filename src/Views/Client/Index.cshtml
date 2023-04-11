@@ -7,12 +7,11 @@ ViewData["Title"] = "Clients Page";
         text-decoration: none;
   }
 </style>
-<h1>Привет! Это страница Clients</h1>
-<button>
-    <a asp-controller="Client" asp-action="New">  <font color="black"> <b>New Client</b>  </font> </a>
-</button>
+<h1>Hello there! Это страница Clients.</h1>
 
-<table>
+<button type="button" class="btn btn-outline-primary"> <a asp-controller="Client" asp-action="New">Create new client</a>  </button>
+<br /><br />
+<table class="table table-striped">
     <tr>
         <th>Id</th>
         <th>Name</th>
