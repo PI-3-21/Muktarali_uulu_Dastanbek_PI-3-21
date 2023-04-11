@@ -2,7 +2,16 @@
 @{
 ViewData["Title"] = "Clients Page";
 }
+<style>
+  a {
+        text-decoration: none;
+  }
+</style>
 <h1>Привет! Это страница Clients</h1>
+<button>
+    <a asp-controller="Client" asp-action="New">  <font color="black"> <b>New Client</b>  </font> </a>
+</button>
+
 <table>
     <tr>
         <th>Id</th>
@@ -10,6 +19,7 @@ ViewData["Title"] = "Clients Page";
         <th>Surname</th>
         <th>Phone Number</th>
         <th>Address</th>
+        <th colspan ="2">Action</th> 
     </tr>
 
 
@@ -21,6 +31,8 @@ ViewData["Title"] = "Clients Page";
             <td>@item.LastName</td>
             <td>@item.PhoneNumber</td>
             <td>@item.Address</td>
+             <td> <button><a asp-controller="Client" asp-action="Edit" asp-route-id="@item.Id"> <font color="black"> <b>Edit</b>  </font></a></button></td>
+            <td> <button><a asp-controller="Client" asp-action="Delete" asp-route-id="@item.Id"> <font color="black"> <b>Delete</b></font></a></button></td>
         </tr>
     }
 </table>
